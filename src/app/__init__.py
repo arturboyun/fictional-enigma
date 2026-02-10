@@ -9,7 +9,8 @@ async def read_root():
 
 
 @app.get("/calculate")
-async def read_root(a: int, b: int):
+async def calculate_upgrade(a: int = 1, b: int = 1):
+    """A simple endpoint to demonstrate calculation."""
     return {"result": a + b}
 
 
