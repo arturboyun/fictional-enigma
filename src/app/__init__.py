@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 
 app = FastAPI()
 
@@ -10,9 +10,20 @@ async def read_root():
 
 @app.get("/calculate")
 async def calculate_upgrade(a: int = 1, b: int = 1):
-    """A simple endpoint to demonstrate calculation."""
+    """A simple endpoint to calculate the sum of two numbers."""
     return {"result": a + b}
 
 
-def main() -> None:
-    print("Hello from app!")
+@app.get("/greet")
+async def not_green_anymore(name: str):
+    return {"message": "It's NOT asdasd!"}
+
+
+@app.get("/asd")
+async def asd():
+    return {"message": "This idddddpoint."}
+
+
+@app.get("/teapot", status_code=status.HTTP_418_IM_A_TEAPOT)
+async def teapot(name: str):
+    return {"message": "I'm a teapot, I cannot brew coffee!"}
