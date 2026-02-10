@@ -9,8 +9,13 @@ async def read_root():
 
 
 @app.get("/calculate")
-async def read_root(a: int, b: int):
+async def calculate(a: int, b: int):
     return {"result": a + b}
+
+
+@app.get("/greet/{name}")
+async def greet(name: str):
+    return {"message": f"Hello, {name}!"}
 
 
 def main() -> None:
