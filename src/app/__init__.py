@@ -21,7 +21,7 @@ async def not_green_anymore(name: str):
 
 @app.get("/asd")
 async def asd():
-    return {"message": "This is a test endpoint."}
+    return {"message": "This idddddpoint."}
 
 
 @app.get("/teapot", status_code=status.HTTP_418_IM_A_TEAPOT)
