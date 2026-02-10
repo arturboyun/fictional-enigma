@@ -14,7 +14,7 @@ async def calculate_upgrade(a: int = 1, b: int = 1):
     return {"result": a + b}
 
 
-@app.get("/greet/{name}")
+@app.get("/greet")
 async def not_green_anymore(name: str):
     return {"message": "It's NOT asdasd!"}
 
