@@ -19,7 +19,11 @@ async def not_green_anymore(name: str):
     return {"message": "It's NOT hello!"}
 
 
+@app.get("/asd")
+async def asd():
+    return {"message": "This is a test endpoint."}
+
+
 @app.get("/teapot", status_code=status.HTTP_418_IM_A_TEAPOT)
 async def teapot(name: str):
     return {"message": "I'm a teapot, I cannot brew coffee!"}
-
