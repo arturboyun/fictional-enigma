@@ -14,5 +14,7 @@ async def read_root():
 async def login(
     username: Annotated[str, Body()],
     password: Annotated[str, Body()],
+    metadata: Annotated[dict, Body()],
 ) -> dict:
-    return {"username": username, "success": True}
+    print(f"metadata: {username=}, {password=}, {metadata=}")
+    return {"username": username, "success": True, "metadata": metadata}
