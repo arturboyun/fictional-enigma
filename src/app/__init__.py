@@ -32,4 +32,11 @@ async def b1(
     data: Annotated[dict, Body()]
 ) -> dict:
     print(f"Received data: {data}")
+
+    
+@app.post("/a1")
+async def a1(
+    data: Annotated[dict, Body()]
+) -> dict:
+    print(f"Received data for a1: {data}")
     return {"success": True, "received_data": data}
