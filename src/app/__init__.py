@@ -26,3 +26,10 @@ async def register(
     password: Annotated[str, Body()],
 ) -> dict:
     return {"username": username, "success": True}
+
+@app.post("/a1")
+async def a1(
+    data: Annotated[dict, Body()]
+) -> dict:
+    print(f"Received data for a1: {data}")
+    return {"success": True, "received_data": data}
