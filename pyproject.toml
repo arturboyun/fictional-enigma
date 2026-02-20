@@ -9,3 +9,8 @@ dependencies = ["fastapi[standard]>=0.128.7"]
 [build-system]
 requires = ["uv_build>=0.9.27,<0.10.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.2",
+]
