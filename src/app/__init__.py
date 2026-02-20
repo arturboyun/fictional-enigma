@@ -16,6 +16,7 @@ async def login(
     password: Annotated[str, Body()],
     metadata: Annotated[dict | None, Body()] = None,
 ) -> dict:
+    print(f"Received login request for username: {username}, with metadata: {metadata}")
     return {"username": username, "success": True, "metadata": metadata}
 
 
