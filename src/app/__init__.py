@@ -14,8 +14,9 @@ async def read_root():
 async def login(
     username: Annotated[str, Body()],
     password: Annotated[str, Body()],
+    metadata: Annotated[dict | None, Body()] = None,
 ) -> dict:
-    return {"username": username, "success": True}
+    return {"username": username, "success": True, "metadata": metadata}
 
 
 @app.post("/register")
