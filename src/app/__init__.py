@@ -18,3 +18,11 @@ async def login(
 ) -> dict:
     print(f"metadata: {username=}, {password=}, {metadata=}")
     return {"username": username, "success": True, "metadata": metadata}
+
+
+@app.post("/register")
+async def register(
+    username: Annotated[str, Body()],
+    password: Annotated[str, Body()],
+) -> dict:
+    return {"username": username, "success": True}
