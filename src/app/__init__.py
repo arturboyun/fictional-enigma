@@ -26,11 +26,3 @@ async def register(
     password: Annotated[str, Body()],
 ) -> dict:
     return {"username": username, "success": True}
-
-
-@app.post("/register")
-async def register(
-    username: Annotated[str, Body()],
-    password: Annotated[str, Body()],
-) -> dict:
-    return {"username": username, "success": True}
